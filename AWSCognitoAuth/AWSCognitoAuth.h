@@ -302,6 +302,24 @@ typedef void (^AWSCognitoAuthSignOutBlock)(NSError * _Nullable error);
            userPoolIdForEnablingASF:(nullable NSString *) userPoolIdForEnablingASF
      enableSFAuthSessionIfAvailable:(BOOL) enableSFAuthSession;
 
+
+- (instancetype)initWithAppClientIdInternal:(NSString *) appClientId
+                            appClientSecret:(nullable NSString *)appClientSecret
+                                     scopes:(NSSet<NSString *> *) scopes
+                          signInRedirectUri:(NSString *) signInRedirectUri
+                         signOutRedirectUri:(NSString *) signOutRedirectUri
+                                  webDomain:(NSString *) webDomain
+                           identityProvider:(nullable NSString *) identityProvider
+                              idpIdentifier:(nullable NSString *) idpIdentifier
+                   userPoolIdForEnablingASF:(nullable NSString *) userPoolIdForEnablingASF
+             enableSFAuthSessionIfAvailable:(BOOL) enableSFAuthSession
+                                  signInUri:(NSString *) signInUri
+                                 signOutUri:(NSString *) signOutUri
+                                  tokensUri:(NSString *) tokensUri
+                   signInUriQueryParameters:(NSDictionary<NSString *, NSString *> *) signInUriQueryParameters
+                  signOutUriQueryParameters:(NSDictionary<NSString *, NSString *> *) signOutUriQueryParameters
+                         isProviderExternal:(BOOL) isProviderExternal;
+
 @end
 
 
